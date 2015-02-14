@@ -1,0 +1,19 @@
+{
+  "connection": {
+    "login": "admin",
+    "password": "admin",
+    "alfrescoUrl": "http://localhost:9000"
+  },
+  "files": [
+    {
+      "source": "/home/user/projects/scala/AlfrescoFileLoader/files/start.js",
+      "destination": "/Repository/Data Directory/Config/Scripts"
+    }
+  ],
+  "directories": [
+    {
+      "source": "scripts/",
+      "destination": "/Repository/Data Directory/Config/Scripts"
+    }
+  ]
+}

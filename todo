@@ -1,0 +1,11 @@
+[*] Load configuration File
+[*] configuration file schema
+[*] parsing JSON configuration file
+* --help, -h
+* loading one file by providing according args
+[*] send sample http request
+[*] check alfresco rest api
+[*] write alfresco file upload(override) request
+[*] build jar
+* infinitive upload
+* asynchronus file load and upload
