@@ -6,7 +6,7 @@
   },
   "files": [
     {
-      "source": "/home/user/projects/scala/AlfrescoFileLoader/files/start.js",
+      "source": "/home/user/projects/scripts/start.js",
       "destination": "/Repository/Data Directory/Config/Scripts"
     }
   ],

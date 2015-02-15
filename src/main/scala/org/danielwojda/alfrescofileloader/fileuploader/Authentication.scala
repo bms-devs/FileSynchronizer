@@ -1,6 +1,6 @@
-package org.danielwojda.alfrescofileloader
+package org.danielwojda.alfrescofileloader.fileuploader
 
-import scalaj.http.{HttpResponse, Http}
+import scalaj.http.{Http, HttpResponse}
 
 
 object Authentication {
