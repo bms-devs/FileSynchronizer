@@ -8,7 +8,7 @@ class HandlerFactory(val uploader: FileUploader) {
   def getHandlerFor(file: FileToLoad) =
     () => {
       val response = uploader.uploadFile(file)
-      println("Upload file: " + file.source + " status:" + response.code)
+      println("File: " + file.source + " status:" + response)
     }
 
 }

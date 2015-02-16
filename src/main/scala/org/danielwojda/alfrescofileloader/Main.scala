@@ -15,7 +15,8 @@ object Main {
     val uploader = new FileUploader(config.connection)
     
     files.foreach(fileToLoad => {
-      uploader.uploadFile(fileToLoad)
+      val response = uploader.uploadFile(fileToLoad)
+      println("File: " + fileToLoad.source + " status:" + response)
     })
     
     if(watchModeIsOn(args)) {

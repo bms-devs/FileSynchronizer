@@ -15,7 +15,8 @@ resolvers ++= Seq(
 libraryDependencies ++= {
   Seq(
     "io.spray" %% "spray-json" % "1.2.5",
-    "org.scalaj" % "scalaj-http_2.10" % "1.1.0",
-    "org.specs2" %% "specs2" % "2.2.3" % "test"
+    "org.apache.httpcomponents" % "httpclient" % "4.4",
+    "org.apache.httpcomponents" % "httpmime" % "4.4",
+    "org.apache.httpcomponents" % "fluent-hc" % "4.4"
   )
 }
