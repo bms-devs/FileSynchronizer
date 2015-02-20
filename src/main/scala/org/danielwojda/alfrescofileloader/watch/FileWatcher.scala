@@ -6,9 +6,9 @@ import scala.collection.JavaConversions._
 
 
 class FileWatcher {
-  val watchedFiles = collection.mutable.Map[String, () => Unit]()
+  val watchedFiles = collection.mutable.Map[String, () => Int]()
 
-  def addToWatched(filePath: Path, handler: () => Unit):  Unit = {
+  def addToWatched(filePath: Path, handler: () => Int):  Unit = {
     val key = filePath.toAbsolutePath.toString
     watchedFiles.put(key, handler)
   }

@@ -3,20 +3,19 @@ package org.danielwojda.alfrescofileloader
 import java.nio.file.Paths
 
 import org.danielwojda.alfrescofileloader.config.Configuration
-import org.danielwojda.alfrescofileloader.fileuploader.FileUploader
+import org.danielwojda.alfrescofileloader.fileuploader.{TimePrinter, AlfrescoFileUploader}
 import org.danielwojda.alfrescofileloader.watch.FileWatcher
 
 
 class Application(config: Configuration) {
-  
+
   val files = config.allFilesToLoad()
-  val uploader = new FileUploader(config.connection)
+  val uploaderWithTimePrinter = new TimePrinter(new AlfrescoFileUploader(config.connection))
 
 
   def upload() = {
     files.foreach(fileToLoad => {
-      val response = uploader.uploadFile(fileToLoad)
-      println("File: " + fileToLoad.source + " status:" + response)
+      uploaderWithTimePrinter.uploadFile(fileToLoad)
     })
     this
   }
@@ -24,7 +23,7 @@ class Application(config: Configuration) {
 
   def startWatching(): Unit = {
     val watcher = new FileWatcher()
-    val handlerFactory = new HandlerFactory(uploader)
+    val handlerFactory = new HandlerFactory(uploaderWithTimePrinter)
 
     files.foreach(fileToLoad => {
       val path = Paths.get(fileToLoad.source)

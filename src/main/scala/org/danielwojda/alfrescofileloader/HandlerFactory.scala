@@ -5,10 +5,6 @@ import org.danielwojda.alfrescofileloader.fileuploader.FileUploader
 
 class HandlerFactory(val uploader: FileUploader) {
 
-  def getHandlerFor(file: FileToLoad) =
-    () => {
-      val response = uploader.uploadFile(file)
-      println("File: " + file.source + " status:" + response)
-    }
+  def getHandlerFor(file: FileToLoad) = () => uploader.uploadFile(file)
 
 }
