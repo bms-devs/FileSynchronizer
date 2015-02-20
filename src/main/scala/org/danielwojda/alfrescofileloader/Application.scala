@@ -8,7 +8,8 @@ import org.danielwojda.alfrescofileloader.watch.FileWatcher
 
 
 class Application(config: Configuration) {
-  val files = config.files
+  
+  val files = config.allFilesToLoad()
   val uploader = new FileUploader(config.connection)
 
 

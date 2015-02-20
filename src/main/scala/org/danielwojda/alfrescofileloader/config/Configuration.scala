@@ -11,10 +11,27 @@ case class FileToLoad(source: String, destination: String) {
 }
 
 
-case class DirectoryToLoad(source: String, destination: String)
+case class DirectoryToLoad(source: String, destination: String) {
+  
+  def filesToLoad(): List[FileToLoad] = {
+    new java.io.File(source)
+      .listFiles
+      .filter(file => !file.isDirectory)
+      .map(file => new FileToLoad(file.getPath, destination))
+      .toList
+  }
+  
+}
 
 
-case class Configuration(connection: Connection, files: List[FileToLoad], directories: List[DirectoryToLoad])
+case class Configuration(connection: Connection, files: List[FileToLoad], directories: List[DirectoryToLoad]){
+
+  def allFilesToLoad(): List[FileToLoad] = {
+    val filesFromDirectories = directories.flatMap(directory => directory.filesToLoad())
+    files ::: filesFromDirectories
+  }
+
+}
 
 
 object Configuration{
