@@ -1,11 +1,13 @@
 [*] Load configuration File
 [*] configuration file schema
 [*] parsing JSON configuration file
-* --help, -h
-* loading one file by providing according args
+[*] --help, -h
+[ ] loading one file by providing according args
 [*] send sample http request
 [*] check alfresco rest api
 [*] write alfresco file upload(override) request
 [*] build jar
-* infinitive upload
-* asynchronus file load and upload
+[*] infinitive upload - watch mode
+[ ] asynchronus file load and upload
+[ ] scan the whole directory structure (subdirectories, all files)
+[ ] Tools is run and watch mode is on. If file is added to watched directory, it must be uploaded and added to watch list.
