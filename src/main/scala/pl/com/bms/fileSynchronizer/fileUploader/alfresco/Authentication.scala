@@ -1,4 +1,4 @@
-package org.danielwojda.alfrescofileloader.fileuploader
+package pl.com.bms.fileSynchronizer.fileUploader.alfresco
 
 import org.apache.http.client.fluent.Request
 import org.apache.http.client.utils.URIBuilder

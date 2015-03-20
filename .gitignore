@@ -1,10 +1,7 @@
 *.iml
 .idea/
-out/
-*.class
 *.log
 .cache
-.history
 .lib/
 dist/*
 target/

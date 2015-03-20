@@ -1,11 +1,18 @@
-import org.danielwojda.alfrescofileloader.config.ArgumentsParser
-import org.scalatest.{Matchers, FlatSpec}
-import org.danielwojda.alfrescofileloader.config.Action._
+package pl.com.bms.fileSynchronizer
+
+import org.scalatest.{FlatSpec, Matchers}
+import pl.com.bms.fileSynchronizer.config.Action._
+import pl.com.bms.fileSynchronizer.config.ArgumentsParser
 
 class ArgumentsParserTest extends FlatSpec with Matchers{
 
   "Application" should "be in watch mode when -w arg is provided" in {
     val app = new ArgumentsParser(Array("-w"))
+    app.action shouldBe WATCH
+  }
+
+  "Application" should "be in upload and watch mode when -W arg is provided" in {
+    val app = new ArgumentsParser(Array("-W"))
     app.action shouldBe UPLOAD_AND_WATCH
   }
   

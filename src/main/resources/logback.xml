@@ -1,0 +1,13 @@
+<configuration>
+    <appender name="NULL-APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>OFF</level>
+        </filter>
+        <encoder>
+            <pattern>null</pattern>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="NULL-APPENDER" />
+    </root>
+</configuration>

@@ -1,7 +1,7 @@
-package org.danielwojda.alfrescofileloader
+package pl.com.bms.fileSynchronizer
 
-import org.danielwojda.alfrescofileloader.config.{ArgumentsParser, Configuration}
-import org.danielwojda.alfrescofileloader.config.Action._
+import pl.com.bms.fileSynchronizer.config.Action._
+import pl.com.bms.fileSynchronizer.config.{Action, ArgumentsParser, Configuration}
 
 object Main {
 
@@ -17,6 +17,9 @@ object Main {
       case UPLOAD_AND_WATCH =>
         new Application(Configuration.load())
           .upload()
+          .startWatching()
+      case WATCH =>
+        new Application(Configuration.load())
           .startWatching()
       case _ => HelpPage.show()
       
