@@ -1,6 +1,6 @@
-name := "FileUploader"
+name := "FileSynchronizer"
 
-organization := "org.danielwojda"
+organization := "pl.com.bms"
 
 version := "0.3"
 
