@@ -24,7 +24,7 @@ To run the application you just need to install JRE version 1.7+. If you don't h
 
 ## Running tests
 
-Application tests are using [ScalaTest](http://www.scalatest.org/). It's fully integrated with sbt, so to run test run
+Application tests are using [ScalaTest](http://www.scalatest.org/). It's fully integrated with sbt, so to run all tests write:
 
 ```bash
 sbt test
@@ -32,7 +32,7 @@ sbt test
 
 ## Building
 
-To build fat-jar with all the application's dependencies we're using [sbt-assembly](https://github.com/sbt/sbt-assembly) plugin. The usage is pretty straightforward. To build the app you just need to write
+To build fat-jar with all the application's dependencies we're using [sbt-assembly](https://github.com/sbt/sbt-assembly) plugin. The usage is pretty straightforward. To build the app you just need to write:
 
 ```bash
 sbt assembly
