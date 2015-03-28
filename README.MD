@@ -10,15 +10,15 @@
 
 This little app helps you with keeping your local files synchronized with remote files available either through ssh protocol or through Alfresco API. We use it mainly during development of other apps, but you could use to synchronize whatever you want.
 
-## Prequisites
+## Prerequisites
 
-### Building
+#### Building
 
 To build the application you need [sbt](http://www.scala-sbt.org/). You can download it from [http://www.scala-sbt.org/download.html](http://www.scala-sbt.org/download.html) website, or you can just find sbt in your favourite package manager (`apt-get`, `yum` or other).
 
 Application works on JVM, so you still need to have Java Development Kit (JDK) installed. Application should compile on JDK version 1.7+, that can be found [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-### Runing
+#### Runing
 
 To run the application you just need to install JRE version 1.7+. If you don't have it go to [download page](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html).
 
