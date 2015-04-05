@@ -12,14 +12,14 @@ object Main {
     arguments.action match {
       case SHOW_HELP => HelpPage.show()
       case UPLOAD =>
-        new Application(Configuration.load())
+        new Application(Configuration.load(arguments.configFileName))
           .upload()
       case UPLOAD_AND_WATCH =>
-        new Application(Configuration.load())
+        new Application(Configuration.load(arguments.configFileName))
           .upload()
           .startWatching()
       case WATCH =>
-        new Application(Configuration.load())
+        new Application(Configuration.load(arguments.configFileName))
           .startWatching()
       case _ => HelpPage.show()
       
