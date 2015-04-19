@@ -47,7 +47,7 @@ The application's configuration is by default placed in `config.json` file (file
   * `login` - User's login
   * `password` - User's password
 * `sourceRoot` - path of local directory inside which all the synchronized file will be located. This directory files and directories specified in next properties will be synchronized with remote host
-* `destinationRoot` - path of remote directory (ssh) or node ref (Alfresco) of folder which can be mapped to sourceRoot local directory
+* `destinationRoot` - path of remote directory (ssh) or node ref (Alfresco) of folder which can be mapped to sourceRoot local directory. Depending on this field, the application will upload files through ssh or http using Alfresco API.
 * `files` - list of all the file to keep synchronized
 * `directories` - list of all the directories to keep synchronized
 
