@@ -15,8 +15,8 @@ object HelpPage {
       |    "password": "password",
       |    "url": "host"
       |  },
-      |  "sourceRoot": "/home/user/files",
-      |  "destinationRoot": "/remoteHost/files",
+      |  "sourceRoot": "/home/user/files/",
+      |  "destinationRoot": "/remoteHost/files/",
       |  "files": [
       |    "fileToSynchronize"
       |  ],

@@ -2,7 +2,10 @@ name := "FileSynchronizer"
 
 organization := "pl.com.bms"
 
-version := "0.3"
+enablePlugins(GitVersioning)
+git.useGitDescribe := true
+
+assemblyJarName in assembly := s"${name.value}-${version.value}.jar"
 
 scalaVersion := "2.11.6"
 
