@@ -11,7 +11,7 @@ import pl.com.bms.fileSynchronizer.watch.FileWatcher
 class Application(config: Configuration) {
 
   val files = config.allFilesToLoad
-  val uploaderWithTimePrinter = new TimePrinter(new SshFileUploader(config))
+  val uploaderWithTimePrinter = new SshFileUploader(config) with TimePrinter
 
 
   def upload() = {
