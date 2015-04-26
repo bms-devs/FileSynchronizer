@@ -27,6 +27,8 @@ object HelpPage {
       |
       |Above configuration will copy fileToSynchronize file and all files
       |from directoryToSynchronize directory into given destination.
+      |If you want to upload files to Alfresco, all you need to do is set
+      |destinationRoot, to a node ref instead of path.
       |
       |Additional options:
       | -h, --help               Display this message
