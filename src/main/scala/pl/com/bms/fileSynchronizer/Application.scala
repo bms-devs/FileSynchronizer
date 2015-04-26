@@ -1,5 +1,6 @@
 package pl.com.bms.fileSynchronizer
 
+import java.io.File
 import java.nio.file.Paths
 
 import pl.com.bms.fileSynchronizer.config.Configuration
@@ -18,9 +19,12 @@ class Application(config: Configuration) {
   }
 
   def upload() = {
-    files.foreach(fileToLoad => {
-      uploaderWithTimePrinter.uploadFile(fileToLoad)
-    })
+    println("File uploading started...")
+    files filter {
+      file => new File(config.sourceRoot + file).isFile
+    } foreach {
+      fileToLoad => uploaderWithTimePrinter.uploadFile(fileToLoad)
+    }
     println("All files uploaded!")
     this
   }
