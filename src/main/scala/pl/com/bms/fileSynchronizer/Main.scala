@@ -10,7 +10,6 @@ object Main {
     val arguments = new ArgumentsParser(args)
     
     arguments.action match {
-      case SHOW_HELP => HelpPage.show()
       case UPLOAD =>
         new Application(Configuration.load(arguments.configFileName))
           .upload()
@@ -21,8 +20,6 @@ object Main {
       case WATCH =>
         new Application(Configuration.load(arguments.configFileName))
           .startWatching()
-      case _ => HelpPage.show()
-      
     }
 
   }
